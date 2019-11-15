@@ -26,13 +26,13 @@ sftp> put /home/fuyatao/downloads/Linuxgl.pdf /var/www/fuyatao/
 ssh自动连接的脚本
 
 ```
-expect -c "set timeout -1;spawn ssh root@100.95.234.122;expect *password* { send \"huawei@123\r\"};  expect *Storage* {send \"exit\r\"}; expect  eof"
+expect -c "set timeout -1;spawn ssh root@100.95.234.122;expect *password* { send \"test@123\r\"};  expect *Storage* {send \"exit\r\"}; expect  eof"
 
 ```
 
 expect 和scp结合使用
 
-expect -c "set timeout -1;spawn bash -c \"scp ./* root@100.95.234.122:~/\";expect *password* { send \"huawei@123\r\"}; expect  eof"
+expect -c "set timeout -1;spawn bash -c \"scp ./* root@100.95.234.122:~/\";expect *password* { send \"test@123\r\"}; expect  eof"
 
 **ssh指定端口登录**
 
@@ -291,7 +291,7 @@ git clone <https://username:password@git.oschina.net/wdm/familycloud.git>
 
 git config --global gc.auto 0  
 
-ref <http://3ms.huawei.com/km/blogs/details/1992913>
+
 
 ### git merge 模拟
 
